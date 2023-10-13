@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace SNMPSystem
 {
     /// <summary>
-    /// Lógica de interacción para Menu.xaml
+    /// Lógica de interacción para ServerList.xaml
     /// </summary>
-    public partial class Menu : Page
+    public partial class ServerList : Page
     {
-        public Menu()
+        public ServerList()
         {
             InitializeComponent();
-        }
-
-        private void WatchServerList(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new ServerList());
-        }
-
-        private void AddNewServer(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new NewServer());
         }
     }
 }

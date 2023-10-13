@@ -46,7 +46,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Button Grid.Column="1" Grid.Row="1" Background="Black">
+                <Button Grid.Column="1" Grid.Row="1" Background="Black" Click="WatchServerList">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -74,7 +74,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Button Grid.Column="1" Grid.Row="1" Background="Black">
+                <Button Grid.Column="1" Grid.Row="1" Background="Black" Click="AddNewServer">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
