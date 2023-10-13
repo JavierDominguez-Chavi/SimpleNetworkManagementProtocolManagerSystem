@@ -28,6 +28,10 @@ namespace DataAccess
         public string sysUpTime { get; set; }
         public string sysObjectID { get; set; }
         public int sysServices { get; set; }
+        public string sysNickname { get; set; }
+        public string sysIP { get; set; }
+        public int sysPort { get; set; }
+        public string sysCommunity { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ServerResources> ServerResources { get; set; }
