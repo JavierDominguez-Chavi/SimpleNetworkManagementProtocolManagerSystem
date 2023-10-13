@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace SNMPSystem
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Lógica de interacción para Menu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Menu : Page
     {
-        public MainWindow()
+        public Menu()
         {
             InitializeComponent();
-            Frame_PagesNavigation.Navigate(new Menu());
         }
     }
 }
