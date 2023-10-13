@@ -11,10 +11,14 @@ namespace Domain
         public int IdServer { get; set; }
         public string SysDescr { get; set; }
         public string SysName { get; set; }
+        public string SysNickname { get; set; }
         public string SysLocation { get; set; }
         public string SysContact { get; set; }
         public string SysUpTime { get; set; }
         public string SysObjectID { get; set; }
+        public string SysIP { get; set; }
+        public int SysPort { get; set; }
+        public string SysCommunity { get; set; }
         public int SysServices { get; set; }
 
 

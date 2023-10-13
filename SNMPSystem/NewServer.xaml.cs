@@ -20,9 +20,21 @@ namespace SNMPSystem
     /// </summary>
     public partial class NewServer : Page
     {
+        public Domain.ServerData ServerData{ get; set; }
         public NewServer()
         {
             InitializeComponent();
+            this.DataContext = ServerData;
+        }
+
+        private void SaveNewServer(object sender, RoutedEventArgs e)
+        {
+            //save new server in database
+        }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
         }
     }
 }
