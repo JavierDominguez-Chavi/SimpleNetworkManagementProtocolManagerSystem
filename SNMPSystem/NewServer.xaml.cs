@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SNMPSystem
 {
     /// <summary>
-    /// Lógica de interacción para ServerDataView.xaml
+    /// Lógica de interacción para NewServer.xaml
     /// </summary>
-    public partial class ServerDataView : Page
+    public partial class NewServer : Page
     {
-        public ServerDataView()
+        public NewServer()
         {
             InitializeComponent();
         }
