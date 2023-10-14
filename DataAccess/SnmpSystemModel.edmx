@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="SNMPdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="SNMPdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ServerData">
           <Key>
             <PropertyRef Name="idServer" />
@@ -52,7 +52,8 @@
             <End Role="ServerResources" EntitySet="ServerResources" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SNMPdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -68,11 +69,11 @@
           <Property Name="sysUpTime" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="sysObjectID" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="sysServices" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ServerResources" Relationship="Self.FK_ServerResources_ServerData" FromRole="ServerData" ToRole="ServerResources" />
-          <Property Name="sysNickname" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
-          <Property Name="sysIP" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="sysNickname" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="sysIP" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="sysPort" Type="Int32" Nullable="false" />
-          <Property Name="sysCommunity" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="sysCommunity" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ServerResources" Relationship="Self.FK_ServerResources_ServerData" FromRole="ServerData" ToRole="ServerResources" />
         </EntityType>
         <EntityType Name="ServerResources">
           <Key>
@@ -114,10 +115,6 @@
           <EntitySetMapping Name="ServerData">
             <EntityTypeMapping TypeName="SNMPdbModel.ServerData">
               <MappingFragment StoreEntitySet="ServerData">
-                <ScalarProperty Name="sysCommunity" ColumnName="sysCommunity" />
-                <ScalarProperty Name="sysPort" ColumnName="sysPort" />
-                <ScalarProperty Name="sysIP" ColumnName="sysIP" />
-                <ScalarProperty Name="sysNickname" ColumnName="sysNickname" />
                 <ScalarProperty Name="idServer" ColumnName="idServer" />
                 <ScalarProperty Name="sysDescr" ColumnName="sysDescr" />
                 <ScalarProperty Name="sysName" ColumnName="sysName" />
@@ -126,6 +123,10 @@
                 <ScalarProperty Name="sysUpTime" ColumnName="sysUpTime" />
                 <ScalarProperty Name="sysObjectID" ColumnName="sysObjectID" />
                 <ScalarProperty Name="sysServices" ColumnName="sysServices" />
+                <ScalarProperty Name="sysNickname" ColumnName="sysNickname" />
+                <ScalarProperty Name="sysIP" ColumnName="sysIP" />
+                <ScalarProperty Name="sysPort" ColumnName="sysPort" />
+                <ScalarProperty Name="sysCommunity" ColumnName="sysCommunity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

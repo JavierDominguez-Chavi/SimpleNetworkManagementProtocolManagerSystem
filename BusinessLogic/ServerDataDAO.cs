@@ -9,18 +9,15 @@ namespace BusinessLogic
 {
     public class ServerDataDAO
     {
-        public Domain.ServerData GetServerDataForId(int idServer)
+        public Boolean InsertNewServer(Domain.ServerData serverData)
         {
-            Domain.ServerData serverDataobtained = new Domain.ServerData();
-            using (var snmpEntities = new SNMPdbEntities())
+            Boolean successful= false;
+            using (var entities = new SNMPdbEntities())
             {
-                var serverDataFound = snmpEntities.ServerData.Find(idServer);
-                if (serverDataFound != null)
-                {
-                    serverDataobtained = new Domain.ServerData(serverDataFound);
-                }
+                entities.ServerData.Add(serverData.ConvertServerDataDomainToServerDataDataAccess());
+                successful = entities.SaveChanges() == 1;
             }
-            return serverDataobtained;
+            return successful;
         }
     }
 }
