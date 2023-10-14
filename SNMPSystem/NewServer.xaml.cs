@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,12 +25,31 @@ namespace SNMPSystem
         public NewServer()
         {
             InitializeComponent();
+            ServerData = new Domain.ServerData();   
             this.DataContext = ServerData;
         }
 
         private void SaveNewServer(object sender, RoutedEventArgs e)
         {
-            //save new server in database
+            ServerDataDAO serverDataDAO = new ServerDataDAO();
+            Boolean newServerInsert = serverDataDAO.InsertNewServer(ServerData);
+            if (newServerInsert)
+            {
+                MessageHelper.SuccessfulOperation();
+                CleanFields();
+
+            }
+            else 
+            {
+                MessageHelper.ConexionError();
+            }
+        }
+
+        private void CleanFields()
+        {
+            ServerData.SysNickname = string.Empty;
+            ServerData.SysIP = string.Empty;
+            ServerData.SysCommunity = string.Empty;
         }
 
         private void Back(object sender, RoutedEventArgs e)
