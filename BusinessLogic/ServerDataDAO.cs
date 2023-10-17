@@ -19,5 +19,23 @@ namespace BusinessLogic
             }
             return successful;
         }
+
+        public List<Domain.ServerData> GetServersList()
+        {
+            List<Domain.ServerData> serverListFound = new List<Domain.ServerData>();
+            using (var entities = new SNMPdbEntities())
+            {
+                List<DataAccess.ServerData> serverListFind = new List<DataAccess.ServerData>();
+                serverListFind = entities.ServerData.ToList();
+                if (serverListFind.FirstOrDefault() != null)
+                {
+                    foreach (DataAccess.ServerData serverData in serverListFind)
+                    {
+                        serverListFound.Add(new Domain.ServerData(serverData));
+                    }
+                }
+            }
+            return serverListFound;
+        }
     }
 }

@@ -1,5 +1,10 @@
-﻿using System;
+﻿using BusinessLogic;
+using DataAccess;
+using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +25,42 @@ namespace SNMPSystem
     /// </summary>
     public partial class ServerList : Page
     {
+        public ObservableCollection<Domain.ServerData> ServersList { get; set; }
         public ServerList()
         {
             InitializeComponent();
+            ServersList = new ObservableCollection<Domain.ServerData>();
+            this.DataContext = this;
+        }
+
+        private void LoadInformationPage(object sender, RoutedEventArgs e)
+        {
+            ServerDataDAO serverDataDAO = new ServerDataDAO();
+            ServersList = new ObservableCollection<Domain.ServerData>(serverDataDAO.GetServersList());
+            if (ServersList.FirstOrDefault() != null)
+            {
+                CollectionViewSource ViewSource_Servers =
+                    ((CollectionViewSource)(this.FindResource("ViewSource_Servers")));
+                ViewSource_Servers.Source = ServersList;
+                //this.DataContext = ServersList;
+            }
+            else
+            {
+                MessageHelper.ConexionError();
+                this.NavigationService.GoBack();
+            }
+        }
+
+        private void DeleteServerSelected(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult resultadoMessageBox =
+               MessageBox.Show("¿Esta seguro de eleiminar esta reseña?", "Confirmación",
+               MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (resultadoMessageBox == MessageBoxResult.Yes)
+            {
+                Domain.ServerData serverData = (sender as Button).Tag as Domain.ServerData;
+                
+            }
         }
     }
 }
