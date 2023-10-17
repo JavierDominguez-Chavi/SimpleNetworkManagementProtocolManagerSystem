@@ -21,11 +21,14 @@ namespace SNMPSystem
     /// </summary>
     public partial class NewServer : Page
     {
-        public Domain.ServerData ServerData{ get; set; }
+        private Domain.ServerData ServerData{ get; set; }
         public NewServer()
         {
             InitializeComponent();
-            ServerData = new Domain.ServerData();   
+            ServerData = new Domain.ServerData();
+            ServerData.SysNickname = string.Empty;
+            ServerData.SysIP = string.Empty;
+            ServerData.SysCommunity = string.Empty;
             this.DataContext = ServerData;
         }
 
