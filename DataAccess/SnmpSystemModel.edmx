@@ -10,13 +10,6 @@
             <PropertyRef Name="idServer" />
           </Key>
           <Property Name="idServer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="sysDescr" Type="nchar" MaxLength="100" Nullable="false" />
-          <Property Name="sysName" Type="nchar" MaxLength="100" Nullable="false" />
-          <Property Name="sysLocation" Type="nchar" MaxLength="100" Nullable="false" />
-          <Property Name="sysContact" Type="nchar" MaxLength="100" Nullable="false" />
-          <Property Name="sysUpTime" Type="nchar" MaxLength="100" Nullable="false" />
-          <Property Name="sysObjectID" Type="nchar" MaxLength="100" Nullable="false" />
-          <Property Name="sysServices" Type="int" Nullable="false" />
           <Property Name="sysNickname" Type="nchar" MaxLength="100" Nullable="false" />
           <Property Name="sysIP" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="sysPort" Type="int" Nullable="false" />
@@ -31,6 +24,12 @@
           <Property Name="objectID" Type="nchar" MaxLength="100" Nullable="false" />
           <Property Name="value" Type="nchar" MaxLength="100" Nullable="false" />
           <Property Name="idServer" Type="int" Nullable="false" />
+          <Property Name="sysServices" Type="int" Nullable="false" />
+          <Property Name="sysUpTime" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="sysDescr" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="sysName" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="sysLocation" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="sysContact" Type="nchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <Association Name="FK_ServerResources_ServerData">
           <End Role="ServerData" Type="Self.ServerData" Multiplicity="1" />
@@ -62,13 +61,6 @@
             <PropertyRef Name="idServer" />
           </Key>
           <Property Name="idServer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="sysDescr" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="sysName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="sysLocation" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="sysContact" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="sysUpTime" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="sysObjectID" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="sysServices" Type="Int32" Nullable="false" />
           <Property Name="sysNickname" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="sysIP" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="sysPort" Type="Int32" Nullable="false" />
@@ -84,6 +76,12 @@
           <Property Name="objectID" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="value" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="idServer" Type="Int32" Nullable="false" />
+          <Property Name="sysServices" Type="Int32" Nullable="false" />
+          <Property Name="sysUpTime" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="sysDescr" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="sysName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="sysLocation" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="sysContact" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="ServerData" Relationship="Self.FK_ServerResources_ServerData" FromRole="ServerResources" ToRole="ServerData" />
         </EntityType>
         <Association Name="FK_ServerResources_ServerData">
@@ -116,13 +114,6 @@
             <EntityTypeMapping TypeName="SNMPdbModel.ServerData">
               <MappingFragment StoreEntitySet="ServerData">
                 <ScalarProperty Name="idServer" ColumnName="idServer" />
-                <ScalarProperty Name="sysDescr" ColumnName="sysDescr" />
-                <ScalarProperty Name="sysName" ColumnName="sysName" />
-                <ScalarProperty Name="sysLocation" ColumnName="sysLocation" />
-                <ScalarProperty Name="sysContact" ColumnName="sysContact" />
-                <ScalarProperty Name="sysUpTime" ColumnName="sysUpTime" />
-                <ScalarProperty Name="sysObjectID" ColumnName="sysObjectID" />
-                <ScalarProperty Name="sysServices" ColumnName="sysServices" />
                 <ScalarProperty Name="sysNickname" ColumnName="sysNickname" />
                 <ScalarProperty Name="sysIP" ColumnName="sysIP" />
                 <ScalarProperty Name="sysPort" ColumnName="sysPort" />
@@ -138,6 +129,12 @@
                 <ScalarProperty Name="objectID" ColumnName="objectID" />
                 <ScalarProperty Name="value" ColumnName="value" />
                 <ScalarProperty Name="idServer" ColumnName="idServer" />
+                <ScalarProperty Name="sysServices" ColumnName="sysServices" />
+                <ScalarProperty Name="sysUpTime" ColumnName="sysUpTime" />
+                <ScalarProperty Name="sysDescr" ColumnName="sysDescr" />
+                <ScalarProperty Name="sysName" ColumnName="sysName" />
+                <ScalarProperty Name="sysLocation" ColumnName="sysLocation" />
+                <ScalarProperty Name="sysContact" ColumnName="sysContact" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

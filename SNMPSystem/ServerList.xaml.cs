@@ -42,7 +42,6 @@ namespace SNMPSystem
                 CollectionViewSource ViewSource_Servers =
                     ((CollectionViewSource)(this.FindResource("ViewSource_Servers")));
                 ViewSource_Servers.Source = ServersList;
-                //this.DataContext = ServersList;
             }
             else
             {
@@ -53,14 +52,32 @@ namespace SNMPSystem
 
         private void DeleteServerSelected(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult resultadoMessageBox =
-               MessageBox.Show("¿Esta seguro de eleiminar esta reseña?", "Confirmación",
-               MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            MessageBoxResult resultadoMessageBox = MessageBox.Show("¿Esta seguro de eliminar esta reseña?", "Confirmación", 
+                MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (resultadoMessageBox == MessageBoxResult.Yes)
             {
                 Domain.ServerData serverData = (sender as Button).Tag as Domain.ServerData;
-                
+                ServerDataDAO serverDataDAO = new ServerDataDAO();
+                if (serverDataDAO.DeleteServerFirId(serverData))
+                {
+                    MessageHelper.SuccessfulOperation();
+                    ServersList.Remove(serverData);
+                }
+                else
+                {
+                    MessageHelper.ConexionError();
+                }
             }
+        }
+
+        private void ViewSelectedServerResources(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new ServerResourcesView());
+        }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
         }
     }
 }

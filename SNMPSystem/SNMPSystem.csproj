@@ -9,14 +9,28 @@
 
   <ItemGroup>
     <None Remove="Images\AddServerImage.png" />
+    <None Remove="Images\DeleteImage.png" />
+    <None Remove="Images\ResourcesImage.png" />
     <None Remove="Images\ServerImage.png" />
+    <None Remove="Images\ServerImage2.jpg" />
+    <None Remove="Images\ServerImage2.png" />
+    <None Remove="Images\SeverImage2.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Images\AddServerImage.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\DeleteImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ResourcesImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\ServerImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ServerImage2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

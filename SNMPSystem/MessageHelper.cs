@@ -17,7 +17,7 @@ namespace SNMPSystem
 
         public static void SuccessfulOperation()
         {
-            MessageBox.Show("Information saved successfully", "Successfuk Operation",
+            MessageBox.Show("The operation was carried out successfully", "Successfuk Operation",
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
