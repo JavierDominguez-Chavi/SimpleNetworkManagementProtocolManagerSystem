@@ -19,6 +19,12 @@ namespace DataAccess
         public string objectID { get; set; }
         public string value { get; set; }
         public int idServer { get; set; }
+        public int sysServices { get; set; }
+        public string sysUpTime { get; set; }
+        public string sysDescr { get; set; }
+        public string sysName { get; set; }
+        public string sysLocation { get; set; }
+        public string sysContact { get; set; }
     
         public virtual ServerData ServerData { get; set; }
     }

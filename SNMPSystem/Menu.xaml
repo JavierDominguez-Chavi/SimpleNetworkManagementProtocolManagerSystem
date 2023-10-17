@@ -54,10 +54,8 @@
                         </Grid.ColumnDefinitions>
                         <Image HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" Width="Auto" Height="Auto"
                                Source="/Images/ServerImage.png"/>
-                        <TextBlock Grid.Column="1" Text="Server List" 
-                            HorizontalAlignment="Center" 
-                            VerticalAlignment="Center" TextWrapping="Wrap" Foreground="White"
-                            TextAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                        <TextBlock Grid.Column="1" Text="Server List" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"
+                                   Foreground="White" TextAlignment="Center" FontWeight="Bold" FontSize="20"/>
                     </Grid>
                 </Button>
             </Grid>
@@ -82,10 +80,8 @@
                         </Grid.ColumnDefinitions>
                         <Image Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" Width="Auto" Height="Auto"
                             Source="/Images/AddServerImage.png"/>
-                        <TextBlock Grid.Column="2" Text="Add New Server" 
-                            HorizontalAlignment="Center" 
-                            VerticalAlignment="Center" TextWrapping="Wrap" Foreground="White"
-                            TextAlignment="Center" FontWeight="Bold" FontSize="20"/>
+                        <TextBlock Grid.Column="2" Text="Add New Server" HorizontalAlignment="Center"  VerticalAlignment="Center" TextWrapping="Wrap"
+                                   Foreground="White" TextAlignment="Center" FontWeight="Bold" FontSize="20"/>
                     </Grid>
                 </Button>
             </Grid>

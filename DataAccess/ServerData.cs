@@ -21,13 +21,6 @@ namespace DataAccess
         }
     
         public int idServer { get; set; }
-        public string sysDescr { get; set; }
-        public string sysName { get; set; }
-        public string sysLocation { get; set; }
-        public string sysContact { get; set; }
-        public string sysUpTime { get; set; }
-        public string sysObjectID { get; set; }
-        public int sysServices { get; set; }
         public string sysNickname { get; set; }
         public string sysIP { get; set; }
         public int sysPort { get; set; }

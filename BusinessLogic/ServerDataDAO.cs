@@ -37,5 +37,22 @@ namespace BusinessLogic
             }
             return serverListFound;
         }
+
+        public Boolean DeleteServerFirId(Domain.ServerData serverData)
+        {
+            Boolean deleteSuccessful = false;
+            using (var entities = new SNMPdbEntities())
+            {
+                DataAccess.ServerData serverDataFound = entities.ServerData.FirstOrDefault(
+                        serverDataDB =>
+                        serverDataDB.idServer == serverData.IdServer);
+                if (serverDataFound != null)
+                {
+                    entities.ServerData.Remove(serverDataFound);
+                    deleteSuccessful = entities.SaveChanges() > 0;
+                }
+            }
+            return deleteSuccessful;
+        }
     }
 }

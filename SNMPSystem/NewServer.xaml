@@ -9,6 +9,7 @@
       d:DataContext="{d:DesignInstance Type=Domain:ServerData}"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Add New Server"
       Background="White">
 
     <Grid>
@@ -36,8 +37,8 @@
                     <RowDefinition Height="10*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <TextBlock x:Name="TextBlock_PageTitle" Grid.Row="1"  TextWrapping="Wrap" VerticalAlignment="Center"
-                    TextAlignment="Center" Text="ADD NEW SERVER" FontWeight="Bold" FontSize="20"/>
+                <TextBlock x:Name="TextBlock_PageTitle" Grid.Row="1"  TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center" 
+                           Text="ADD NEW SERVER" FontWeight="Bold" FontSize="20"/>
             </Grid>
 
             <Grid Grid.Row="1">
@@ -61,8 +62,8 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock x:Name="TextBlock_InvalidIp" Grid.Row="2" TextWrapping="Wrap" Text="Borrame ip invalido"
-                                VerticalAlignment="Top" FontSize="14" Foreground="Red"/>
+                    <TextBlock x:Name="TextBlock_InvalidIp" Grid.Row="2" TextWrapping="Wrap" Text="Borrame ip invalido" VerticalAlignment="Top" 
+                               FontSize="14" Foreground="Red"/>
                 </Grid>
                 <Grid Grid.Column="2" Grid.Row="1">
                     <Grid.RowDefinitions>
@@ -70,46 +71,58 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock x:Name="TextBlock_IvalidComunidad" Grid.Row="2" TextWrapping="Wrap" Text="Borrame comunidad invalida"
-                        VerticalAlignment="Top" FontSize="14" Foreground="Red"/>
+                    <TextBlock x:Name="TextBlock_InvalidPort" Grid.Row="2" TextWrapping="Wrap" Text="Borrame Port invalido" VerticalAlignment="Top" 
+                               FontSize="14" Foreground="Red"/>
                 </Grid>
-
                 <Grid Grid.Column="2" Grid.Row="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock x:Name="TextBlock_IvalidNickname" Grid.Row="2" TextWrapping="Wrap" Text="Borrame nickname invalido"
-                        VerticalAlignment="Top" FontSize="14" Foreground="Red"/>
+                    <TextBlock x:Name="TextBlock_IvalidComunidad" Grid.Row="2" TextWrapping="Wrap" Text="Borrame comunidad invalida" VerticalAlignment="Top"
+                               FontSize="14" Foreground="Red"/>
                 </Grid>
 
-                <Label x:Name="Label_IpServer" Grid.Column="1" Grid.Row="0" 
-                    Background="Gray" VerticalAlignment="Center" FontSize="16" 
-                    FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
+                <Grid Grid.Column="2" Grid.Row="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="TextBlock_IvalidNickname" Grid.Row="2" TextWrapping="Wrap" Text="Borrame nickname invalido" VerticalAlignment="Top" 
+                               FontSize="14" Foreground="Red"/>
+                </Grid>
+
+                <Label x:Name="Label_IpServer" Grid.Column="1" Grid.Row="0" Background="Gray" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" 
+                       VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
                     <TextBlock TextWrapping="Wrap" Text="Ip Server: "/>
                 </Label>
-                <Label x:Name="Label_CommunityString" Grid.Column="1" Grid.Row="1"
-                    Background="Gray" VerticalAlignment="Center" FontSize="16" 
-                    FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
+                <Label x:Name="Label_PortServer" Grid.Column="1" Grid.Row="1" Background="Gray" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"
+                       VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
+                    <TextBlock TextWrapping="Wrap" Text="Port: "/>
+                </Label>
+                <Label x:Name="Label_CommunityString" Grid.Column="1" Grid.Row="2" Background="Gray" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"
+                       VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
                     <TextBlock TextWrapping="Wrap" Text="Community String"/>
                 </Label>
-                <Label x:Name="Label_NickNameServer" Grid.Column="1" Grid.Row="2" 
-                    Background="Gray" VerticalAlignment="Center" FontSize="16" 
-                    FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
+                <Label x:Name="Label_NickNameServer" Grid.Column="1" Grid.Row="3" Background="Gray" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"
+                       VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
                     <TextBlock TextWrapping="Wrap" Text="NickName Server: "/>
                 </Label>
 
-                <xctk:WatermarkTextBox x:Name="TextBox_IpServer" Padding="2" Grid.Column="2" Grid.Row="0"
-                   VerticalAlignment="Center" FontSize="16" CharacterCasing="Normal" Watermark="Ingresa Máximo 50 Caracteres"
-                   Height="30" MaxLength="50" Text="{Binding SysIP}" 
-                   IsReadOnly="False"/>
-                <xctk:WatermarkTextBox x:Name="TextBox_CommunityString" Padding="2" Grid.Column="2" Grid.Row="1"
-                   VerticalAlignment="Center" FontSize="16" CharacterCasing="Normal"  Watermark="Ingresa Máximo 100 Caracteres"
-                   Height="30" MaxLength="100" Text = "{Binding SysCommunity}" IsReadOnly="False"/>
-                <xctk:WatermarkTextBox x:Name="TextBox_NickNameServer" Padding="2" Grid.Column="2" Grid.Row="2"
-                   VerticalAlignment="Center" FontSize="16" CharacterCasing="Normal"  Watermark="Ingresa Máximo 100 Caracteres"
-                   Height="30" MaxLength="100" Text = "{Binding SysNickname}" IsReadOnly="False"/>
+                <xctk:WatermarkTextBox x:Name="TextBox_IpServer" Padding="2" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" FontSize="16" 
+                                       CharacterCasing="Normal" Watermark="Ingresa Máximo 50 Caracteres" Height="30" MaxLength="50" Text="{Binding SysIP}" 
+                                       IsReadOnly="False"/>
+                <xctk:WatermarkTextBox x:Name="TextBox_PortServer" Padding="2" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" FontSize="16"
+                                       CharacterCasing="Normal" Watermark="Ingresa Máximo 50 Caracteres" Height="30" MaxLength="50" Text="{Binding SysPort}" 
+                                       IsReadOnly="False"/>
+                <xctk:WatermarkTextBox x:Name="TextBox_CommunityString" Padding="2" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" FontSize="16" 
+                                       CharacterCasing="Normal" Watermark="Ingresa Máximo 100 Caracteres" Height="30" MaxLength="100" 
+                                       Text = "{Binding SysCommunity}" IsReadOnly="False"/>
+                <xctk:WatermarkTextBox x:Name="TextBox_NickNameServer" Padding="2" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" FontSize="16"
+                                       CharacterCasing="Normal"  Watermark="Ingresa Máximo 100 Caracteres" Height="30" MaxLength="100" 
+                                       Text = "{Binding SysNickname}" IsReadOnly="False"/>
             </Grid>
 
             <Grid Grid.Row="7" Grid.Column="2">
@@ -126,10 +139,8 @@
                     <RowDefinition Height="6*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                <Button x:Name="Button_SaveNewServer" Grid.Column="2" Content="Save" 
-                    Grid.Row="1" VerticalAlignment="Center" Height="34" Click="SaveNewServer"/>
-                <Button x:Name="Button_Back" Grid.Column="4" Content="Back" Grid.Row="1" 
-                    VerticalAlignment="Center" Height="34" Click="Back"/>
+                <Button x:Name="Button_SaveNewServer" Grid.Column="2" Content="Save" Grid.Row="1" VerticalAlignment="Center" Height="34" Click="SaveNewServer"/>
+                <Button x:Name="Button_Back" Grid.Column="4" Content="Back" Grid.Row="1" VerticalAlignment="Center" Height="34" Click="Back"/>
             </Grid>
         </Grid>
     </Grid>
