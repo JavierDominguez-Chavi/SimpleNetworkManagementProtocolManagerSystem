@@ -15,6 +15,8 @@
     <None Remove="Images\ServerImage2.jpg" />
     <None Remove="Images\ServerImage2.png" />
     <None Remove="Images\SeverImage2.jpg" />
+    <None Remove="Images\SysDescrImage.png" />
+    <None Remove="Images\SysNameImage.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +33,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\ServerImage2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SysDescrImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SysNameImage.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
