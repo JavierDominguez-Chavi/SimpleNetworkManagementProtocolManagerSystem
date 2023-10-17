@@ -43,6 +43,118 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="System Name"/>
+                <Image Grid.Row="1" Source="/Images/SysNameImage.png"/>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="Biorrame Borrame Borrame Biorrame Borrame Borrame"/>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="System Description"/>
+                <Image Grid.Row="1" Source="/Images/SysNameImage.png"/>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="Biorrame Borrame Borrame Biorrame Borrame Borrame"/>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="System Location"/>
+                <Image Grid.Row="1" Source="/Images/SysNameImage.png"/>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="Biorrame Borrame Borrame Biorrame Borrame Borrame"/>
+            </Grid>
+
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="System Contact"/>
+                <Image Grid.Row="1" Source="/Images/SysNameImage.png"/>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="Biorrame Borrame Borrame Biorrame Borrame Borrame"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="System Services"/>
+                <Image Grid.Row="1" Source="/Images/SysNameImage.png"/>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="Biorrame Borrame Borrame Biorrame Borrame Borrame"/>
+            </Grid>
+            
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="System Uptime"/>
+                <Image Grid.Row="1" Source="/Images/SysNameImage.png"/>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="Biorrame Borrame Borrame Biorrame Borrame Borrame"/>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="Physical Memory Usage"/>
+                <Image Grid.Row="1" Source="/Images/SysNameImage.png"/>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="Biorrame Borrame Borrame Biorrame Borrame Borrame"/>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="Available Physical Memory"/>
+                <Image Grid.Row="1" Source="/Images/SysNameImage.png"/>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"
+                           Text="Biorrame Borrame Borrame Biorrame Borrame Borrame"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>
