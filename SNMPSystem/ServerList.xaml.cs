@@ -49,7 +49,7 @@ namespace SNMPSystem
 
         private void DeleteServerSelected(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult resultadoMessageBox = MessageBox.Show("The server information will be deleted, You are Sure?", "Confirmación", 
+            MessageBoxResult resultadoMessageBox = MessageBox.Show("The server information will be deleted, Are You Sure?", "Confirmación", 
                 MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (resultadoMessageBox == MessageBoxResult.Yes)
             {
