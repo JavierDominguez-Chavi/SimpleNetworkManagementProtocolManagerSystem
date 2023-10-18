@@ -10,20 +10,20 @@
             <PropertyRef Name="idServer" />
           </Key>
           <Property Name="idServer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="sysNickname" Type="nchar" MaxLength="100" Nullable="false" />
-          <Property Name="sysIP" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="sysNickname" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="sysIP" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="sysPort" Type="int" Nullable="false" />
-          <Property Name="sysCommunity" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="sysCommunity" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerResources">
           <Key>
             <PropertyRef Name="idResource" />
           </Key>
           <Property Name="idResource" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="nchar" MaxLength="100" Nullable="false" />
-          <Property Name="objectID" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="objectID" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="idServer" Type="int" Nullable="false" />
-          <Property Name="value" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="value" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <Association Name="FK_ServerResources_ServerData">
           <End Role="ServerData" Type="Self.ServerData" Multiplicity="1" />
@@ -55,10 +55,10 @@
             <PropertyRef Name="idServer" />
           </Key>
           <Property Name="idServer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="sysNickname" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="sysIP" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="sysNickname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sysIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="sysPort" Type="Int32" Nullable="false" />
-          <Property Name="sysCommunity" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="sysCommunity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="ServerResources" Relationship="Self.FK_ServerResources_ServerData" FromRole="ServerData" ToRole="ServerResources" />
         </EntityType>
         <EntityType Name="ServerResources">
@@ -66,10 +66,10 @@
             <PropertyRef Name="idResource" />
           </Key>
           <Property Name="idResource" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="objectID" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="objectID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="idServer" Type="Int32" Nullable="false" />
-          <Property Name="value" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="ServerData" Relationship="Self.FK_ServerResources_ServerData" FromRole="ServerResources" ToRole="ServerData" />
         </EntityType>
         <Association Name="FK_ServerResources_ServerData">

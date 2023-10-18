@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="14d77bf6d867475fa1f8b756fdc08582" Name="Diagram1">
+      <Diagram DiagramId="39aa4e0f6fe1495bbc11bb4bd6500286" Name="Diagram1">
         <EntityTypeShape EntityType="SNMPdbModel.ServerData" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SNMPdbModel.ServerResources" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="SNMPdbModel.FK_ServerResources_ServerData" ManuallyRouted="false" />
