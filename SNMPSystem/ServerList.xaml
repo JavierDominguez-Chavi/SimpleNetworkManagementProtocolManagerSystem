@@ -57,20 +57,20 @@
                                 </Grid.RowDefinitions>
 
                                 <TextBlock  Grid.Row="0" FontSize="20" TextWrapping="Wrap">
-                            <Run Text="NickName:" FontWeight="ExtraBlack"/>
-                            <Run Text="{Binding SysNickname}" />
+                                    <Run Text="NickName:" FontWeight="ExtraBlack"/>
+                                    <Run Text="{Binding SysNickname}" />
                                 </TextBlock>
                                 <TextBlock  Grid.Row="1" FontSize="20" TextWrapping="Wrap">
-                            <Run Text="IP Addres:" FontWeight="ExtraBlack"/>
-                            <Run Text="{Binding SysIP}" />
+                                    <Run Text="IP Addres:" FontWeight="ExtraBlack"/>
+                                    <Run Text="{Binding SysIP}" />
                                 </TextBlock>
                                 <TextBlock  Grid.Row="2" FontSize="20" TextWrapping="Wrap">
-                            <Run Text="Port:" FontWeight="ExtraBlack"/>
-                            <Run Text="{Binding SysPort}" />
+                                    <Run Text="Port:" FontWeight="ExtraBlack"/>
+                                    <Run Text="{Binding SysPort}" />
                                 </TextBlock>
                                 <TextBlock  Grid.Row="3" FontSize="20" TextWrapping="Wrap">
-                             <Run Text="Community:" FontWeight="ExtraBlack"/>
-                             <Run Text="{Binding SysCommunity}" />
+                                     <Run Text="Community:" FontWeight="ExtraBlack"/>
+                                     <Run Text="**********" />
                                 </TextBlock>
                             </Grid>
                             <Button Grid.Column="2" Tag="{Binding}" Name="Button_ViewResources" Click="ViewSelectedServerResources" Background="Transparent"

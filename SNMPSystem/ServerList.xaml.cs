@@ -20,9 +20,6 @@ using System.Windows.Shapes;
 
 namespace SNMPSystem
 {
-    /// <summary>
-    /// Lógica de interacción para ServerList.xaml
-    /// </summary>
     public partial class ServerList : Page
     {
         public ObservableCollection<Domain.ServerData> ServersList { get; set; }
@@ -72,7 +69,8 @@ namespace SNMPSystem
 
         private void ViewSelectedServerResources(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new ServerResourcesView());
+            Domain.ServerData server = (sender as Button).Tag as Domain.ServerData;
+            this.NavigationService.Navigate(new ServerResourcesView(server));
         }
 
         private void Back(object sender, RoutedEventArgs e)

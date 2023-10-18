@@ -9,18 +9,29 @@
 
   <ItemGroup>
     <None Remove="Images\AddServerImage.png" />
+    <None Remove="Images\AvailableMemoryImage.png" />
     <None Remove="Images\DeleteImage.png" />
     <None Remove="Images\ResourcesImage.png" />
     <None Remove="Images\ServerImage.png" />
     <None Remove="Images\ServerImage2.jpg" />
     <None Remove="Images\ServerImage2.png" />
     <None Remove="Images\SeverImage2.jpg" />
+    <None Remove="Images\SysContactImage.png" />
     <None Remove="Images\SysDescrImage.png" />
+    <None Remove="Images\SysLocationImage.png" />
+    <None Remove="Images\SysMemoryUsageImage.png" />
     <None Remove="Images\SysNameImage.png" />
+    <None Remove="Images\SysNumProcesses.png" />
+    <None Remove="Images\SysNumUsersImage.png" />
+    <None Remove="Images\SysServicesImage.png" />
+    <None Remove="Images\SysUptimeImage.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Images\AddServerImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\AvailableMemoryImage.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\DeleteImage.png">
@@ -35,10 +46,31 @@
     <Content Include="Images\ServerImage2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\SysContactImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\SysDescrImage.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\SysLocationImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SysMemoryUsageImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\SysNameImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SysNumProcesses.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SysNumUsersImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SysServicesImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SysUptimeImage.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -46,6 +78,7 @@
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.5.1" />
+    <PackageReference Include="Lextm.SharpSnmpLib" Version="12.5.2" />
   </ItemGroup>
 
   <ItemGroup>
