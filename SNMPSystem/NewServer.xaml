@@ -91,7 +91,7 @@
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
                     <TextBlock x:Name="TextBlock_IvalidNickname" Grid.Row="2" TextWrapping="Wrap" Text="Borrame nickname invalido" VerticalAlignment="Top" 
-                               FontSize="14" Foreground="Red"/>
+                               FontSize="14" Foreground="Red" Visibility="Hidden"/>
                 </Grid>
 
                 <Label x:Name="Label_IpServer" Grid.Column="1" Grid.Row="0" Background="Gray" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" 
